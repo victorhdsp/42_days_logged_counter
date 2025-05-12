@@ -6,7 +6,7 @@ const end_at = new Date().toISOString();
 
 async function main() {
     const dataList = await get_logged_days(start_at, end_at, user_list)
-    //console.log(dataList);
+    console.log(dataList);
 }
 
 main();
