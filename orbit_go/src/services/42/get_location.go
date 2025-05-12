@@ -8,7 +8,7 @@ import (
 )
 
 func GetLocationByUserID(startAt, endAt, userID, token string) (LocationResponse, error) {
-	url := fmt.Sprintf("https://api.intra.42.fr/v2/users/%s/locations?range[end_at]=%s,%s", userID, startAt, endAt)
+	url := fmt.Sprintf("https://api.intra.42.fr/v2/users/%s/locations_stats?begin_at=%s&end_at=%s", userID, startAt, endAt)
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
